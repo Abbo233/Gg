@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتجاه القبلة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color:  #4C243B;
+        }
+        .qibla-container {
+            margin-top: 100px;
+            position: relative;
+        }
+        .qibla-image {
+            width: 150px;
+            height: 150px;
+            transition: transform 2s ease-out;
+        }
+        .qibla-text {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qibla-container">
+        <img id="qiblaImage" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh-XxDluYhHr96McESQwjYWg1jD-39R9tfkQyVC_pIH_Qs2Av7HVOxRS0JNNv9Z0JEEVHl4KG5sWph1EE0njnlfVPyQTeRBZpPyqbLx723dZCpi1h71AqvduosdUYzv-2KMtglj74kNqnmL5RQz7DavQMPjJXlMIIYgJ34X-cb-l0rF3x7xWxeNz3XbcVk/s738/Picsart_24-08-14_11-13-19-101.png" alt="اتجاه القبلة" class="qibla-image">
+        <div class="qibla-text">اتجاه القبلة</div>
+    </div>
+
+    <script>
+        const qiblaImage = document.getElementById('qiblaImage');
+
+        function rotateCompass() {
+            // زاوية الدوران بالدرجات
+            const qiblaDirection = 135; // على سبيل المثال، يمكن تعديل الزاوية حسب الموقع
+            qiblaImage.style.transform = `rotate(${qiblaDirection}deg)`;
+        }
+
+        window.onload = rotateCompass;
+    </script>
+</body>
+</html>
